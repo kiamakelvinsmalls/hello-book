@@ -94,3 +94,76 @@ section .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .co
 #clientView .modal-header{
 	padding: 0 15px
 }
+
+.aside-headings{
+	
+	background-color:rgba(0,0,0,0.5); 
+	padding: 5px;
+	color: #fff;
+	box-shadow: 5px 5px 10px black;
+	border-radius:5px;
+  
+
+}
+.aside-headings:hover{
+	color: black;
+}
+.aside-quick-links .aside-link{
+	display: block;
+	border-bottom: dashed 0.5px grey;
+	margin-left:-25px;
+	max-width: 90%;
+	border-radius: 5px;
+	font-size: 15px;
+	text-transform: capitalize;
+
+}
+.aside-link{
+	padding-top: 10px;
+}
+.aside-link:hover{
+	box-shadow: inset 1px 1px 10px black;
+	background-color: rgba(0,0,0,0.7);
+	padding: 5px;
+	border-radius: 5px;
+}
+.aside-link:hover a{
+	text-decoration: none; 
+	color: rgba(144,194,33,1.0);
+
+}
+img{
+	border-radius: 10px;
+}
+.cart{
+	margin-top: 10px;
+
+}
+.overlay {
+  position: absolute;
+  bottom: -6.2px;
+  left: -1px;
+  right: 0;
+  background-color:rgba(256,256,256,0.8); 
+  overflow: hidden;
+  width: 101%;
+  height: 104.2%;
+  transform:scale(0);
+  -webkit-transform:scale(0);
+  transition: .3s ease;
+  border-radius: 12px;
+}
+.col-md-3:hover .overlay {
+  transform: scale(0.9)
+}
+
+.bookdetails .bookdetailsinfo{
+	display: block;
+	border-bottom: dashed 0.5px grey;
+	margin-left:-25px;
+	max-width: 90%;
+	border-radius: 5px;
+	font-size: 15px;
+	text-transform: capitalize;
+	margin-top: 20px;
+}
