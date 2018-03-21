@@ -61,11 +61,11 @@
           <h4 style="color:green;" class="text-center"><span class="glyphicon glyphicon-lock"></span> Login</h4>
         </div>
         <div class="modal-body">
-          <form role="form" action="html/dashboard.html">
+          <form role="form" action="html/dashboard.html" onsubmit="return check()">
               <input type="text" id="useridNo" class="form-control" placeholder="Enter id no" required="on" >
               <input type="password" class="form-control"  placeholder="Enter password" required="on" id='userpswd'>
               <input type="checkbox" value="" checked>Remember me <span class="pull-right"><a href="#">ForgotPassword?</a></span>
-            <button type="submit" class="btn btn-default btn-success btn-block" onclick="check()"><span class="glyphicon glyphicon-off"></span> Login</button>
+            <button type="submit" class="btn btn-default btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
           </form>
         </div>
         <div class="modal-footer">
@@ -91,18 +91,18 @@
           <h4 style="color:green;" class="text-center"><span class="glyphicon glyphicon-user"></span> signup</h4>
         </div>
         <div class="modal-body">
-          <form role="form">
-              <input type="text" class="form-control"  placeholder="first name" id="firstname">
-              <input type="text" class="form-control"  placeholder="last name" id="lastname">
-              <input type="text" class="form-control"  placeholder="email" id="email">
-              <input type="text" class="form-control"  placeholder="phone number" id='phoneno'>
-              <input type="text" class="form-control"  placeholder="Client id No" id='idNo'>
+          <form role="form" onsubmit="store(); shut();login()">
+              <input type="text" class="form-control"  placeholder="first name" id="firstname" required="">
+              <input type="text" class="form-control"  placeholder="last name" id="lastname" required="">
+              <input type="text" class="form-control"  placeholder="email" id="email" required="">
+              <input type="text" class="form-control"  placeholder="phone number" id='phoneno' required="">
+              <input type="text" class="form-control"  placeholder="Client id No" id='idNo' required="">
               <input type="radio"  name="gender" value="male" >  male
               <input type="radio"  name="gender" value="female" >  female
               <input type="password" class="form-control" id="pswd" placeholder="Enter password" required>
-              <input type="password" class="form-control" id="pswd" placeholder="confirm password" required>
+              <input type="password" class="form-control" id="pswd2" placeholder="confirm password" required>
               
-            <button type="submit" class="btn btn-default btn-success btn-block"  onclick="store()";>create account</button>
+            <button type="submit" class="btn btn-default btn-success btn-block"  >create account</button>
           </form>
         </div>
         <div class="modal-footer">
@@ -130,9 +130,9 @@
           <h4 style="color:green;" class="text-center"><span class="glyphicon glyphicon-lock"></span> Login</h4>
         </div>
         <div class="modal-body">
-          <form role="form" action="html/admindashboard.html">
-              <input type="text" class="form-control" id="usrname" placeholder="JOB ID NO" required="on">
-              <input type="password" class="form-control" id="psw" placeholder="Enter password" required="on">
+          <form role="form" action="html/admindashboard.html" onsubmit="return check()">
+              <input type="text" class="form-control" id="useridNo" placeholder="JOB ID NO" required="on">
+              <input type="password" class="form-control" id="userpswd" placeholder="Enter password" required="on">
               <input type="checkbox" value="" checked>Remember me <span class="pull-right"><a href="#">ForgotPassword?</a></span>
             <button type="submit" class="btn btn-default btn-success btn-block" ;><span class="glyphicon glyphicon-off"></span> Login</button>
           </form>
@@ -160,19 +160,19 @@
           <h4 style="color:green;" class="text-center"><span class="glyphicon glyphicon-user"></span> signup</h4>
         </div>
         <div class="modal-body">
-          <form role="form">
-              <input type="text" class="form-control"  placeholder="first name">
-              <input type="text" class="form-control"  placeholder="last name">
-              <input type="text" class="form-control"  placeholder="email">
-              <input type="text" class="form-control"  placeholder="phone number">
-              <input type="text" class="form-control"  placeholder="job id no">
+          <form role="form" onsubmit ="store(); shut(); adminLogin()">
+              <input type="text" class="form-control"  placeholder="first name" id="firstname" required="">
+              <input type="text" class="form-control"  placeholder="last name" id="lastname" required="">
+              <input type="text" class="form-control"  placeholder="email" id="email" required="">
+              <input type="text" class="form-control"  placeholder="phone number" id="phoneno" required="">
+              <input type="text" class="form-control"  placeholder="job id no" id="idNo" required="">
               <input type="radio"  name="gender" value="male" >  male
               <input type="radio"  name="gender" value="female" >  female
               <input type="date" class="pull-right">
-              <input type="password" class="form-control" id="psw" placeholder="Enter password">
-              <input type="password" class="form-control" id="psw" placeholder="confirm password">
+              <input type="password" class="form-control" id="pswd" placeholder="Enter password" required="">
+              <input type="password" class="form-control" id="pswd2" placeholder="confirm password" required="">
               
-            <button type="submit" class="btn btn-default btn-success btn-block" ;> create account</button>
+            <button type="submit" class="btn btn-default btn-success btn-block"> create account</button>
           </form>
         </div>
         <div class="modal-footer">
@@ -196,44 +196,44 @@
 
 <div class="container">
 <div class="col-md-3">
-<h2>Categories</h2>
-<ul>
-	<li>romantic</li>
-	<li>action</li>
-	<li>epic</li>
-	<li>drama</li>
-	<li>educational</li>
-	<li>historical</li>
+<h2 class="aside-headings">Categories</h2>
+<ul class="aside-quick-links">
+<li class="aside-link" ><a href="">romantic</a> </li>
+  <li class="aside-link"> <a href="">action</a></li>
+  <li class="aside-link"> <a href="">epic</a></li>
+  <li class="aside-link"> <a href="">drama</a></li>
+  <li class="aside-link"> <a href="">educational</a></li>
+  <li class="aside-link"> <a href="">historical</a></li>
 </ul>
 
 
-<h2>Best Seller</h2>
-<ul>
-	<li>romantic</li>
-	<li>action</li>
-	<li>epic</li>
-	<li>drama</li>
-	<li>educational</li>
-	<li>historical</li>
+<h2 class="aside-headings">Best Seller</h2>
+<ul class="aside-quick-links">
+	<li class="aside-link" ><a href="">romantic</a> </li>
+  <li class="aside-link"> <a href="">action</a></li>
+  <li class="aside-link"> <a href="">epic</a></li>
+  <li class="aside-link"> <a href="">drama</a></li>
+  <li class="aside-link"> <a href="">educational</a></li>
+  <li class="aside-link"> <a href="">historical</a></li>
 </ul>
-<h2>Top Rated</h2>
-<ul>
-	<li>romantic</li>
-	<li>action</li>
-	<li>epic</li>
-	<li>drama</li>
-	<li>educational</li>
-	<li>historical</li>
+<h2 class="aside-headings">Top Rated</h2>
+<ul class="aside-quick-links">
+<li class="aside-link" ><a href="">romantic</a> </li>
+  <li class="aside-link"> <a href="">action</a></li>
+  <li class="aside-link"> <a href="">epic</a></li>
+  <li class="aside-link"> <a href="">drama</a></li>
+  <li class="aside-link"> <a href="">educational</a></li>
+  <li class="aside-link"> <a href="">historical</a></li>
 </ul>
 
-<h2>New </h2>
-<ul>
-	<li>romantic</li>
-	<li>action</li>
-	<li>epic</li>
-	<li>drama</li>
-	<li>educational</li>
-	<li>historical</li>
+<h2 class="aside-headings">New </h2>
+<ul class="aside-quick-links">
+  <li class="aside-link" ><a href="">romantic</a> </li>
+	<li class="aside-link"> <a href="">action</a></li>
+	<li class="aside-link"> <a href="">epic</a></li>
+	<li class="aside-link"> <a href="">drama</a></li>
+	<li class="aside-link"> <a href="">educational</a></li>
+	<li class="aside-link"> <a href="">historical</a></li>
 </ul>
 	
 </div>
@@ -243,74 +243,257 @@
 
 
 <div class="col-md-9">
-<div class="books">
-<div class='info'>
-	<img class="img-responsive" src="images/3 days in havana.jpg">
+<div class="row">
+<div class='col-md-3'>
+  <img class="img-responsive" src="images/3 days in havana.jpg">
+  <div class="overlay">
+    <ul class="bookdetails text-center">
+      <li class="bookdetailsinfo">name:</li>
+      <li class="bookdetailsinfo">author:</li>
+      <li class="bookdetailsinfo">category:</li>
+    </ul>
+    <span></span>
+    <span class="btn btn-default pull-right cart glyphicon glyphicon-shopping-cart"> Borrow</span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-glyphicon glyphicon-thumbs-up"></span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-thumbs-down"></span>
+  </div>
 </div>
-<div class="poster">
-	<img class="img-responsive" src="images/3-days-to-kill-2014-poster1.jpg" alt="book image">
+<div class="col-md-3">
+  <img class="img-responsive" src="images/3-days-to-kill-2014-poster1.jpg" alt="book image">
+  <div class="overlay">
+    <ul class="bookdetails text-center">
+      <li class="bookdetailsinfo">name:</li>
+      <li class="bookdetailsinfo">author:</li>
+      <li class="bookdetailsinfo">category:</li>
+    </ul>
+    <span></span>
+    <span class="btn btn-default pull-right cart glyphicon glyphicon-shopping-cart"> Borrow</span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-glyphicon glyphicon-thumbs-up"></span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-thumbs-down"></span>
+  </div>
 </div>
-<div class='info'>
-	<img class="img-responsive" src="images/aloha url.jpg" alt="book image">
+<div class='col-md-3'>
+  <img class="img-responsive" src="images/aloha url.jpg" alt="book image">
+  <div class="overlay">
+    <ul class="bookdetails text-center">
+      <li class="bookdetailsinfo">name:</li>
+      <li class="bookdetailsinfo">author:</li>
+      <li class="bookdetailsinfo">category:</li>
+    </ul>
+    <span></span>
+    <span class="btn btn-default pull-right cart glyphicon glyphicon-shopping-cart"> Borrow</span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-glyphicon glyphicon-thumbs-up"></span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-thumbs-down"></span>
+  </div>
 </div>
-<div class="poster">
-	<img class="img-responsive" src="images/beyond the lights.jpg" alt="book image">
-</div>
-
-	
-</div>
-
-<div class="books">
-<div class='info'>
-	<img class="img-responsive" src="images/dark matter.jpg" alt="book image">
-</div>
-<div class="poster">
-	<img class="img-responsive" src="images/air.jpg" alt="book image">
-</div>
-<div class='info'>
-	<img class="img-responsive" src="images/Bella-Thorne-Blended.jpg" alt="book image">
-</div>
-<div class="poster">
-	<img class="img-responsive" src="images/chappie-poster-teaser.jpg" alt="book image">
-</div>
-
-	
-</div>
-
-<div class="books">
-<div class='info'>
-	<img class="img-responsive" src="images/escort.jpg" alt="book image">
-</div>
-<div class="poster">
-	<img class="img-responsive" src="images/Exodus-Gods-and-Kings-Poster-Bale.jpg" alt="book image">
-</div>
-<div class='info'>
-	<img class="img-responsive" src="images/extinction.jpg" alt="book image">
-</div>
-<div class="poster">
-	<img class="img-responsive" src="images/cop_car_ver2.jpg" alt="book image">
-</div>
-
-	
-</div>
-<div class="books">
-<div class='info'>
-	<img class="img-responsive" src="images/FIN06_Mortdecai_1Sht_JD_26x39-w.jpg" alt="book image">
-</div>
-<div class="poster">
-	<img class="img-responsive" src="images/doomsday url.jpg" alt="book image">
-</div>
-<div class='info'>
-	<img class="img-responsive" src="images/defiance.jpg" alt="book image">
-</div>
-<div class="poster">
-	<img class="img-responsive" src="images/Fifty-Shades-of-Grey-Film-t_720x1080.jpg" alt="book image">
+<div class="col-md-3">
+  <img class="img-responsive" src="images/beyond the lights.jpg" alt="book image">
+  <div class="overlay">
+    <ul class="bookdetails text-center">
+      <li class="bookdetailsinfo">name:</li>
+      <li class="bookdetailsinfo">author:</li>
+      <li class="bookdetailsinfo">category:</li>
+    </ul>
+    <span></span>
+    <span class="btn btn-default pull-right cart glyphicon glyphicon-shopping-cart"> Borrow</span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-glyphicon glyphicon-thumbs-up"></span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-thumbs-down"></span>
+  </div>
 </div>
 
-	
+  
 </div>
 
-	
+<div class="row">
+<div class='col-md-3'>
+  <img class="img-responsive" src="images/dark matter.jpg" alt="book image">
+  <div class="overlay">
+    <ul class="bookdetails text-center">
+      <li class="bookdetailsinfo">name:</li>
+      <li class="bookdetailsinfo">author:</li>
+      <li class="bookdetailsinfo">category:</li>
+    </ul>
+    <span></span>
+    <span class="btn btn-default pull-right cart glyphicon glyphicon-shopping-cart"> Borrow</span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-glyphicon glyphicon-thumbs-up"></span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-thumbs-down"></span>
+  </div>
+</div>
+<div class="col-md-3">
+  <img class="img-responsive" src="images/air.jpg" alt="book image">
+  <div class="overlay">
+    <ul class="bookdetails text-center">
+      <li class="bookdetailsinfo">name:</li>
+      <li class="bookdetailsinfo">author:</li>
+      <li class="bookdetailsinfo">category:</li>
+    </ul>
+    <span></span>
+    <span class="btn btn-default pull-right cart glyphicon glyphicon-shopping-cart"> Borrow</span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-glyphicon glyphicon-thumbs-up"></span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-thumbs-down"></span>
+  </div>
+</div>
+<div class='col-md-3'>
+  <img class="img-responsive" src="images/Bella-Thorne-Blended.jpg" alt="book image">
+  <div class="overlay">
+    <ul class="bookdetails text-center">
+      <li class="bookdetailsinfo">name:</li>
+      <li class="bookdetailsinfo">author:</li>
+      <li class="bookdetailsinfo">category:</li>
+    </ul>
+    <span></span>
+    <span class="btn btn-default pull-right cart glyphicon glyphicon-shopping-cart"> Borrow</span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-glyphicon glyphicon-thumbs-up"></span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-thumbs-down"></span>
+  </div>
+</div>
+<div class="col-md-3">
+  <img class="img-responsive" src="images/chappie-poster-teaser.jpg" alt="book image">
+  <div class="overlay">
+    <ul class="bookdetails text-center">
+      <li class="bookdetailsinfo">name:</li>
+      <li class="bookdetailsinfo">author:</li>
+      <li class="bookdetailsinfo">category:</li>
+    </ul>
+    <span></span>
+    <span class="btn btn-default pull-right cart glyphicon glyphicon-shopping-cart"> Borrow</span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-glyphicon glyphicon-thumbs-up"></span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-thumbs-down"></span>
+  </div>
+</div>
+
+  
+</div>
+
+<div class="row">
+<div class='col-md-3'>
+  <img class="img-responsive" src="images/escort.jpg" alt="book image">
+  <div class="overlay">
+    <ul class="bookdetails text-center">
+      <li class="bookdetailsinfo">name:</li>
+      <li class="bookdetailsinfo">author:</li>
+      <li class="bookdetailsinfo">category:</li>
+    </ul>
+    <span></span>
+    <span class="btn btn-default pull-right cart glyphicon glyphicon-shopping-cart"> Borrow</span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-glyphicon glyphicon-thumbs-up"></span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-thumbs-down"></span>
+  </div>
+</div>
+<div class="col-md-3">
+  <img class="img-responsive" src="images/Exodus-Gods-and-Kings-Poster-Bale.jpg" alt="book image">
+  <div class="overlay">
+    <ul class="bookdetails text-center">
+      <li class="bookdetailsinfo">name:</li>
+      <li class="bookdetailsinfo">author:</li>
+      <li class="bookdetailsinfo">category:</li>
+    </ul>
+    <span></span>
+    <span class="btn btn-default pull-right cart glyphicon glyphicon-shopping-cart"> Borrow</span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-glyphicon glyphicon-thumbs-up"></span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-thumbs-down"></span>
+  </div>
+</div>
+<div class='col-md-3'>
+  <img class="img-responsive" src="images/extinction.jpg" alt="book image">
+  <div class="overlay">
+    <ul class="bookdetails text-center">
+      <li class="bookdetailsinfo">name:</li>
+      <li class="bookdetailsinfo">author:</li>
+      <li class="bookdetailsinfo">category:</li>
+    </ul>
+    <span></span>
+    <span class="btn btn-default pull-right cart glyphicon glyphicon-shopping-cart"> Borrow</span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-glyphicon glyphicon-thumbs-up"></span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-thumbs-down"></span>
+  </div>
+</div>
+<div class="col-md-3">
+  <img class="img-responsive" src="images/cop_car_ver2.jpg" alt="book image">
+  <div class="overlay">
+    <ul class="bookdetails text-center">
+      <li class="bookdetailsinfo">name:</li>
+      <li class="bookdetailsinfo">author:</li>
+      <li class="bookdetailsinfo">category:</li>
+    </ul>
+    <span></span>
+    <span class="btn btn-default pull-right cart glyphicon glyphicon-shopping-cart"> Borrow</span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-glyphicon glyphicon-thumbs-up"></span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-thumbs-down"></span>
+  </div>
+</div>
+
+  
+</div>
+
+
+
+<div class="row">
+<div class='col-md-3'>
+  <img class="img-responsive" src="images/FIN06_Mortdecai_1Sht_JD_26x39-w.jpg" alt="book image">
+  <div class="overlay">
+    <ul class="bookdetails text-center">
+      <li class="bookdetailsinfo">name:</li>
+      <li class="bookdetailsinfo">author:</li>
+      <li class="bookdetailsinfo">category:</li>
+    </ul>
+    <span></span>
+    <span class="btn btn-default pull-right cart glyphicon glyphicon-shopping-cart"> Borrow</span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-glyphicon glyphicon-thumbs-up"></span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-thumbs-down"></span>
+  </div>
+</div>
+<div class="col-md-3">
+  <img class="img-responsive" src="images/doomsday url.jpg" alt="book image">
+  <div class="overlay">
+    <ul class="bookdetails text-center">
+      <li class="bookdetailsinfo">name:</li>
+      <li class="bookdetailsinfo">author:</li>
+      <li class="bookdetailsinfo">category:</li>
+    </ul>
+    <span></span>
+    <span class="btn btn-default pull-right cart glyphicon glyphicon-shopping-cart"> Borrow</span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-glyphicon glyphicon-thumbs-up"></span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-thumbs-down"></span>
+  </div>
+</div>
+<div class='col-md-3'>
+  <img class="img-responsive" src="images/defiance.jpg" alt="book image">
+  <div class="overlay">
+    <ul class="bookdetails text-center">
+      <li class="bookdetailsinfo">name:</li>
+      <li class="bookdetailsinfo">author:</li>
+      <li class="bookdetailsinfo">category:</li>
+    </ul>
+    <span></span>
+    <span class="btn btn-default pull-right cart glyphicon glyphicon-shopping-cart"> Borrow</span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-glyphicon glyphicon-thumbs-up"></span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-thumbs-down"></span>
+  </div>
+</div>
+
+
+
+<div class="col-md-3">
+  <img class="img-responsive" src="images/Fifty-Shades-of-Grey-Film-t_720x1080.jpg" alt="book image">
+  <div class="overlay">
+    <ul class="bookdetails text-center">
+      <li class="bookdetailsinfo">name:</li>
+      <li class="bookdetailsinfo">author:</li>
+      <li class="bookdetailsinfo">category:</li>
+    </ul>
+    <span></span>
+    <span class="btn btn-default pull-right cart glyphicon glyphicon-shopping-cart"> Borrow</span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-glyphicon glyphicon-thumbs-up"></span>
+    <span class="btn btn-default pull-left cart glyphicon glyphicon-thumbs-down"></span>
+  </div>
+  
+</div>
+
+  
+</div>
+
+  
 </div>
 </div>
 
@@ -333,20 +516,20 @@
       </div>
       <div class="col-md-3">
         <ul class="nav nav-pills nav-stacked">
-          <li><a href="#">Product for Mac</a></li>
-          <li><a href="#">Product for Windows</a></li>
+          <li><a href="#">Categories</a></li>
+          <li><a href="#">Best Seller</a></li>
         </ul>
       </div>
       <div class="col-md-3">
         <ul class="nav nav-pills nav-stacked">
-          <li><a href="#">Web analytics</a></li>
-          <li><a href="#">Presentations</a></li>          
+          <li><a href="#">Top Rated</a></li>
+          <li><a href="#">New</a></li>          
         </ul>
       </div>
       <div class="col-md-3">
         <ul class="nav nav-pills nav-stacked">
-          <li><a href="#">Product Help</a></li>
-          <li><a href="#">Developer API</a></li>
+          <li><a href="#">Authors</a></li>
+          <li><a href="#">donate</a></li>
         </ul>
       </div>  
     </div>
