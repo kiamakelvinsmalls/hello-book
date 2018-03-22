@@ -10,7 +10,6 @@
    <!--  <meta http-equiv="refresh" content="100"> -->
     <!-- The above 6 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>B.I.G Resource Center</title>
-
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
@@ -26,49 +25,40 @@
     <![endif]-->
   </head>
   <body>
- 
-
- <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span> 
-      </button>
-     <a class="navbar-brand text-center" href="#">B.I.G RESOURCE </br> CENTER </span></a> 
+   <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span> 
+        </button>
+       <a class="navbar-brand text-center" href="#">B.I.G RESOURCE </br> CENTER </span></a> 
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="admindashboard.html">Home</a></li>
+          <li><a href="add.html"> add book </a></li>
+          <li><a href="update.html">update book</a></li> 
+          <li><a href="delete.html"> delete book</a></li>
+          <li><a href="#"><span onclick="clientView()";>view client profile</span></a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> <span onclick="clientDetails()";>admin account</span> </a></li>
+        </ul>
+      </div>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="admindashboard.html">Home</a></li>
-        <li><a href="add.html"> add book </a></li>
-        <li><a href="update.html">update book</a></li> 
-        <li><a href="delete.html"> delete book</a></li>
-        <li><a href="#"><span onclick="clientView()";>view client profile</span></a></li>
-
-      </ul>
-
-      <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> <span onclick="clientDetails()";>admin account</span> </a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
+  </nav>
 <!-- client view Modal -->
   <div id="clientView" role="dialog" class="modal">
-
     <div class="formcontainer text-capitalize">
-
-      <!-- Modal content-->
+<!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
         <h3></h3>
           <button type="button" class="close"  onclick="dismiss()";>&times;</button>
           <h4 style="color:green;" class="text-center"> view client account</h4>
         </div>
-        
           <form role="form" enctype="multipart/form-data" action="view.html">
            <div class="modal-body">
               <label>client id no</label>
@@ -80,394 +70,359 @@
               <input type="reset" class=" btn btn-warning pull-left " value="reset">
               <input type="submit" class=" btn btn-success pull-right bg-success" value="view profile">
            </div>
-        </form>
-       
+          </form>     
+        </div>
+      </div> 
     </div>
-  </div> 
-  </div>
-  <!--end of client view modal-->
-
-
+<!--end of client view modal-->
 <!-- details modal-->
-  <div id="clientDetails" role="dialog" class="clientDetailsContainer">
-
-
-      <!-- Modal content-->
+    <div id="clientDetails" role="dialog" class="clientDetailsContainer">
+<!-- Modal content-->
       <div class="modal-content">
         <div class="modal-body">
         <button type="button" class="close pull-right"  onclick="dismiss()";>&times;</button></br>
-        <div class="clear">
-        <img src="../images/IMG_20180319_113603.jpg" class="img-responsive img-circle" width="150px">
-          <aside>
-            <ul class="clientInfo text-capitalize">
-            <li><h4>elizabeth wanjiru</h4></li>
-            <li>job id no:1254634</li>
-            <li>tel:0704873000</li>
-          </ul>            
-          </aside>
+          <div class="clear">
+            <img src="../images/IMG_20180319_113603.jpg" class="img-responsive img-circle" width="150px">
+             <aside>
+              <ul class="clientInfo text-capitalize">
+                <li><h4>elizabeth wanjiru</h4></li>
+                <li>job id no:1254634</li>
+                <li>tel:0704873000</li>
+              </ul>            
+             </aside>
           </div>
-         
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default btn-default pull-left" onclick="dismiss()">Cancel</button>
           <a href="../index.html"><button type="button" class="btn btn-default btn-default pull-right">logout</button></a>
         </div>
       </div>
- 
-  </div>
- 
-  <!--end of client details modal-->
-
-
-
-
-<div class="container">
-<div class="col-md-3">
-<h2 class="aside-headings">Categories</h2>
-<ul class="aside-quick-links">
-<li class="aside-link" ><a href="">romantic</a> </li>
-  <li class="aside-link"> <a href="">action</a></li>
-  <li class="aside-link"> <a href="">epic</a></li>
-  <li class="aside-link"> <a href="">drama</a></li>
-  <li class="aside-link"> <a href="">educational</a></li>
-  <li class="aside-link"> <a href="">historical</a></li>
-</ul>
-
-
-<h2 class="aside-headings">Best Seller</h2>
-<ul class="aside-quick-links">
-  <li class="aside-link" ><a href="">romantic</a> </li>
-  <li class="aside-link"> <a href="">action</a></li>
-  <li class="aside-link"> <a href="">epic</a></li>
-  <li class="aside-link"> <a href="">drama</a></li>
-  <li class="aside-link"> <a href="">educational</a></li>
-  <li class="aside-link"> <a href="">historical</a></li>
-</ul>
-<h2 class="aside-headings">Top Rated</h2>
-<ul class="aside-quick-links">
-<li class="aside-link" ><a href="">romantic</a> </li>
-  <li class="aside-link"> <a href="">action</a></li>
-  <li class="aside-link"> <a href="">epic</a></li>
-  <li class="aside-link"> <a href="">drama</a></li>
-  <li class="aside-link"> <a href="">educational</a></li>
-  <li class="aside-link"> <a href="">historical</a></li>
-</ul>
-
-<h2 class="aside-headings">New </h2>
-<ul class="aside-quick-links">
-  <li class="aside-link" ><a href="">romantic</a> </li>
-  <li class="aside-link"> <a href="">action</a></li>
-  <li class="aside-link"> <a href="">epic</a></li>
-  <li class="aside-link"> <a href="">drama</a></li>
-  <li class="aside-link"> <a href="">educational</a></li>
-  <li class="aside-link"> <a href="">historical</a></li>
-</ul>
-  
-</div>
-
-
-
-
-
-<div class="col-md-9">
-<div class="row">
-<div class='col-md-3'>
-  <img class="img-responsive" src="../images/3 days in havana.jpg">
-  <div class="overlay">
-    <ul class="bookdetails text-center">
-      <li class="bookdetailsinfo">name:</li>
-      <li class="bookdetailsinfo">author:</li>
-      <li class="bookdetailsinfo">category:</li>
-    </ul>
-    <span></span>
-    <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> locked</span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
-  </div>
-</div>
-<div class="col-md-3">
-  <img class="img-responsive" src="../images/3-days-to-kill-2014-poster1.jpg" alt="book image">
-  <div class="overlay">
-    <ul class="bookdetails text-center">
-      <li class="bookdetailsinfo">name:</li>
-      <li class="bookdetailsinfo">author:</li>
-      <li class="bookdetailsinfo">category:</li>
-    </ul>
-    <span></span>
-    <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> locked</span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
-  </div>
-</div>
-<div class='col-md-3'>
-  <img class="img-responsive" src="../images/aloha url.jpg" alt="book image">
-  <div class="overlay">
-    <ul class="bookdetails text-center">
-      <li class="bookdetailsinfo">name:</li>
-      <li class="bookdetailsinfo">author:</li>
-      <li class="bookdetailsinfo">category:</li>
-    </ul>
-    <span></span>
-    <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> locked</span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
-  </div>
-</div>
-<div class="col-md-3">
-  <img class="img-responsive" src="../images/beyond the lights.jpg" alt="book image">
-  <div class="overlay">
-    <ul class="bookdetails text-center">
-      <li class="bookdetailsinfo">name:</li>
-      <li class="bookdetailsinfo">author:</li>
-      <li class="bookdetailsinfo">category:</li>
-    </ul>
-    <span></span>
-    <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> locked</span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
-  </div>
-</div>
-
-  
-</div>
-
-<div class="row">
-<div class='col-md-3'>
-  <img class="img-responsive" src="../images/dark matter.jpg" alt="book image">
-  <div class="overlay">
-    <ul class="bookdetails text-center">
-      <li class="bookdetailsinfo">name:</li>
-      <li class="bookdetailsinfo">author:</li>
-      <li class="bookdetailsinfo">category:</li>
-    </ul>
-    <span></span>
-    <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> locked</span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
-  </div>
-</div>
-<div class="col-md-3">
-  <img class="img-responsive" src="../images/air.jpg" alt="book image">
-  <div class="overlay">
-    <ul class="bookdetails text-center">
-      <li class="bookdetailsinfo">name:</li>
-      <li class="bookdetailsinfo">author:</li>
-      <li class="bookdetailsinfo">category:</li>
-    </ul>
-    <span></span>
-    <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> locked</span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
-  </div>
-</div>
-<div class='col-md-3'>
-  <img class="img-responsive" src="../images/Bella-Thorne-Blended.jpg" alt="book image">
-  <div class="overlay">
-    <ul class="bookdetails text-center">
-      <li class="bookdetailsinfo">name:</li>
-      <li class="bookdetailsinfo">author:</li>
-      <li class="bookdetailsinfo">category:</li>
-    </ul>
-    <span></span>
-    <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> locked</span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
-  </div>
-</div>
-<div class="col-md-3">
-  <img class="img-responsive" src="../images/chappie-poster-teaser.jpg" alt="book image">
-  <div class="overlay">
-    <ul class="bookdetails text-center">
-      <li class="bookdetailsinfo">name:</li>
-      <li class="bookdetailsinfo">author:</li>
-      <li class="bookdetailsinfo">category:</li>
-    </ul>
-    <span></span>
-    <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> locked</span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
-  </div>
-</div>
-
-  
-</div>
-
-<div class="row">
-<div class='col-md-3'>
-  <img class="img-responsive" src="../images/escort.jpg" alt="book image">
-  <div class="overlay">
-    <ul class="bookdetails text-center">
-      <li class="bookdetailsinfo">name:</li>
-      <li class="bookdetailsinfo">author:</li>
-      <li class="bookdetailsinfo">category:</li>
-    </ul>
-    <span></span>
-    <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> locked</span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
-  </div>
-</div>
-<div class="col-md-3">
-  <img class="img-responsive" src="../images/Exodus-Gods-and-Kings-Poster-Bale.jpg" alt="book image">
-  <div class="overlay">
-    <ul class="bookdetails text-center">
-      <li class="bookdetailsinfo">name:</li>
-      <li class="bookdetailsinfo">author:</li>
-      <li class="bookdetailsinfo">category:</li>
-    </ul>
-    <span></span>
-    <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> locked</span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
-  </div>
-</div>
-<div class='col-md-3'>
-  <img class="img-responsive" src="../images/extinction.jpg" alt="book image">
-  <div class="overlay">
-    <ul class="bookdetails text-center">
-      <li class="bookdetailsinfo">name:</li>
-      <li class="bookdetailsinfo">author:</li>
-      <li class="bookdetailsinfo">category:</li>
-    </ul>
-    <span></span>
-    <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> locked</span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
-  </div>
-</div>
-<div class="col-md-3">
-  <img class="img-responsive" src="../images/cop_car_ver2.jpg" alt="book image">
-  <div class="overlay">
-    <ul class="bookdetails text-center">
-      <li class="bookdetailsinfo">name:</li>
-      <li class="bookdetailsinfo">author:</li>
-      <li class="bookdetailsinfo">category:</li>
-    </ul>
-    <span></span>
-    <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> locked</span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
-  </div>
-</div>
-
-  
-</div>
-<div class="row">
-<div class='col-md-3'>
-  <img class="img-responsive" src="../images/FIN06_Mortdecai_1Sht_JD_26x39-w.jpg" alt="book image">
-  <div class="overlay">
-    <ul class="bookdetails text-center">
-      <li class="bookdetailsinfo">name:</li>
-      <li class="bookdetailsinfo">author:</li>
-      <li class="bookdetailsinfo">category:</li>
-    </ul>
-    <span></span>
-    <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> locked</span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
-  </div>
-</div>
-<div class="col-md-3">
-  <img class="img-responsive" src="../images/doomsday url.jpg" alt="book image">
-  <div class="overlay">
-    <ul class="bookdetails text-center">
-      <li class="bookdetailsinfo">name:</li>
-      <li class="bookdetailsinfo">author:</li>
-      <li class="bookdetailsinfo">category:</li>
-    </ul>
-    <span></span>
-    <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> locked</span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
-  </div>
-</div>
-<div class='col-md-3'>
-  <img class="img-responsive" src="../images/defiance.jpg" alt="book image">
-  <div class="overlay">
-    <ul class="bookdetails text-center">
-      <li class="bookdetailsinfo">name:</li>
-      <li class="bookdetailsinfo">author:</li>
-      <li class="bookdetailsinfo">category:</li>
-    </ul>
-    <span></span>
-    <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> locked</span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
-  </div>
-</div>
-<div class="col-md-3">
-  <img class="img-responsive" src="../images/Fifty-Shades-of-Grey-Film-t_720x1080.jpg" alt="book image">
-  <div class="overlay">
-    <ul class="bookdetails text-center">
-      <li class="bookdetailsinfo">name:</li>
-      <li class="bookdetailsinfo">author:</li>
-      <li class="bookdetailsinfo">category:</li>
-    </ul>
-    <span></span>
-    <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> locked</span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
-    <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
-  </div>
-</div>
-
-  
-</div>
-
-  
-</div>
-</div>
-
-
-
-
-
-
-
-
-       <footer>
-  <div class="container text-center">
-    <hr />
-  <div class="row">
-    <div class="col-lg-12">
+    </div> 
+<!--end of client details modal-->
+    <div class="container">
+      <!--start of side menu-->
       <div class="col-md-3">
-        <ul class="nav nav-pills nav-stacked">
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Blog</a></li>
-        </ul>
-      </div>
-      <div class="col-md-3">
-        <ul class="nav nav-pills nav-stacked">
-          <li><a href="#">added books</a></li>
-          <li><a href="#">updated books</a></li>
-        </ul>
-      </div>
-      <div class="col-md-3">
-        <ul class="nav nav-pills nav-stacked">
-          <li><a href="#">deleted books</a></li>
-          <li><a href="#">Presentations</a></li>          
-        </ul>
-      </div>
-      <div class="col-md-3">
-        <ul class="nav nav-pills nav-stacked">
-          <li><a href="#">donate</a></li>
-          <li><a href="#">become a partner</a></li>
-        </ul>
-      </div>  
+        <h2 class="aside-headings">Categories</h2>
+        <ul class="aside-quick-links">
+        <li class="aside-link" ><a href="">romantic</a> </li>
+        <li class="aside-link"> <a href="">action</a></li>
+        <li class="aside-link"> <a href="">epic</a></li>
+        <li class="aside-link"> <a href="">drama</a></li>
+        <li class="aside-link"> <a href="">educational</a></li>
+        <li class="aside-link"> <a href="">historical</a></li>
+      </ul>
+      <h2 class="aside-headings">Best Seller</h2>
+      <ul class="aside-quick-links">
+        <li class="aside-link" ><a href="">romantic</a> </li>
+        <li class="aside-link"> <a href="">action</a></li>
+        <li class="aside-link"> <a href="">epic</a></li>
+        <li class="aside-link"> <a href="">drama</a></li>
+        <li class="aside-link"> <a href="">educational</a></li>
+        <li class="aside-link"> <a href="">historical</a></li>
+      </ul>
+      <h2 class="aside-headings">Top Rated</h2>
+      <ul class="aside-quick-links">
+      <li class="aside-link" ><a href="">romantic</a> </li>
+        <li class="aside-link"> <a href="">action</a></li>
+        <li class="aside-link"> <a href="">epic</a></li>
+        <li class="aside-link"> <a href="">drama</a></li>
+        <li class="aside-link"> <a href="">educational</a></li>
+        <li class="aside-link"> <a href="">historical</a></li>
+      </ul>
+      <h2 class="aside-headings">New </h2>
+      <ul class="aside-quick-links">
+        <li class="aside-link" ><a href="">romantic</a> </li>
+        <li class="aside-link"> <a href="">action</a></li>
+        <li class="aside-link"> <a href="">epic</a></li>
+        <li class="aside-link"> <a href="">drama</a></li>
+        <li class="aside-link"> <a href="">educational</a></li>
+        <li class="aside-link"> <a href="">historical</a></li>
+      </ul>
     </div>
-  </div>
-  <hr>
-    <div class="row">
-        <div class="col-lg-12">
-            <ul class="nav nav-pills nav-justified">
-                <li><a href="/">© 2018 B.I.G Resource Center.</a></li>
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Privacy</a></li>
-            </ul>
+    <!--begin of book posters-->
+    <div class="col-md-9">
+      <!--begin of book rows-->
+      <div class="row">
+        <div class='col-md-3'>
+        <img class="img-responsive" src="../images/3 days in havana.jpg">
+        <div class="overlay">
+          <ul class="bookdetails text-center">
+            <li class="bookdetailsinfo">name:</li>
+            <li class="bookdetailsinfo">author:</li>
+            <li class="bookdetailsinfo">category:</li>
+          </ul>
+          <span></span>
+          <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> lock</span>
+          <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
+          <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
         </div>
     </div>
-</div>
-</footer>
-
+    <div class="col-md-3">
+      <img class="img-responsive" src="../images/3-days-to-kill-2014-poster1.jpg" alt="book image">
+      <div class="overlay">
+        <ul class="bookdetails text-center">
+          <li class="bookdetailsinfo">name:</li>
+          <li class="bookdetailsinfo">author:</li>
+          <li class="bookdetailsinfo">category:</li>
+        </ul>
+        <span></span>
+        <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> lock</span>
+        <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
+        <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
+      </div>
+    </div>
+    <div class='col-md-3'>
+      <img class="img-responsive" src="../images/aloha url.jpg" alt="book image">
+      <div class="overlay">
+        <ul class="bookdetails text-center">
+          <li class="bookdetailsinfo">name:</li>
+          <li class="bookdetailsinfo">author:</li>
+          <li class="bookdetailsinfo">category:</li>
+        </ul>
+        <span></span>
+        <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> lock</span>
+        <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
+        <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <img class="img-responsive" src="../images/beyond the lights.jpg" alt="book image">
+      <div class="overlay">
+        <ul class="bookdetails text-center">
+          <li class="bookdetailsinfo">name:</li>
+          <li class="bookdetailsinfo">author:</li>
+          <li class="bookdetailsinfo">category:</li>
+        </ul>
+        <span></span>
+        <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> lock</span>
+        <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
+        <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
+      </div>
+    </div>   
+    </div>
+    !--begin of book rows-->
+    <div class="row">
+    <div class='col-md-3'>
+      <img class="img-responsive" src="../images/dark matter.jpg" alt="book image">
+      <div class="overlay">
+        <ul class="bookdetails text-center">
+          <li class="bookdetailsinfo">name:</li>
+          <li class="bookdetailsinfo">author:</li>
+          <li class="bookdetailsinfo">category:</li>
+        </ul>
+        <span></span>
+        <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> lock</span>
+        <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
+        <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <img class="img-responsive" src="../images/air.jpg" alt="book image">
+      <div class="overlay">
+        <ul class="bookdetails text-center">
+          <li class="bookdetailsinfo">name:</li>
+          <li class="bookdetailsinfo">author:</li>
+          <li class="bookdetailsinfo">category:</li>
+        </ul>
+        <span></span>
+        <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> lock</span>
+        <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
+        <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
+      </div>
+    </div>
+    <div class='col-md-3'>
+      <img class="img-responsive" src="../images/Bella-Thorne-Blended.jpg" alt="book image">
+      <div class="overlay">
+        <ul class="bookdetails text-center">
+          <li class="bookdetailsinfo">name:</li>
+          <li class="bookdetailsinfo">author:</li>
+          <li class="bookdetailsinfo">category:</li>
+        </ul>
+        <span></span>
+        <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> lock</span>
+        <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
+        <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <img class="img-responsive" src="../images/chappie-poster-teaser.jpg" alt="book image">
+      <div class="overlay">
+        <ul class="bookdetails text-center">
+          <li class="bookdetailsinfo">name:</li>
+          <li class="bookdetailsinfo">author:</li>
+          <li class="bookdetailsinfo">category:</li>
+        </ul>
+        <span></span>
+        <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> lock</span>
+        <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
+        <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
+      </div>
+    </div>   
+    </div>
+    !--begin of book rows-->
+    <div class="row">
+    <div class='col-md-3'>
+      <img class="img-responsive" src="../images/escort.jpg" alt="book image">
+      <div class="overlay">
+        <ul class="bookdetails text-center">
+          <li class="bookdetailsinfo">name:</li>
+          <li class="bookdetailsinfo">author:</li>
+          <li class="bookdetailsinfo">category:</li>
+        </ul>
+        <span></span>
+        <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> lock</span>
+        <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
+        <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <img class="img-responsive" src="../images/Exodus-Gods-and-Kings-Poster-Bale.jpg" alt="book image">
+      <div class="overlay">
+        <ul class="bookdetails text-center">
+          <li class="bookdetailsinfo">name:</li>
+          <li class="bookdetailsinfo">author:</li>
+          <li class="bookdetailsinfo">category:</li>
+        </ul>
+        <span></span>
+        <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> lock</span>
+        <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
+        <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
+      </div>
+    </div>
+    <div class='col-md-3'>
+      <img class="img-responsive" src="../images/extinction.jpg" alt="book image">
+      <div class="overlay">
+        <ul class="bookdetails text-center">
+          <li class="bookdetailsinfo">name:</li>
+          <li class="bookdetailsinfo">author:</li>
+          <li class="bookdetailsinfo">category:</li>
+        </ul>
+        <span></span>
+        <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> lock</span>
+        <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
+        <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <img class="img-responsive" src="../images/cop_car_ver2.jpg" alt="book image">
+      <div class="overlay">
+        <ul class="bookdetails text-center">
+          <li class="bookdetailsinfo">name:</li>
+          <li class="bookdetailsinfo">author:</li>
+          <li class="bookdetailsinfo">category:</li>
+        </ul>
+        <span></span>
+        <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> lock</span>
+        <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
+        <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
+      </div>
+    </div>      
+    </div>
+    !--begin of book rows-->
+    <div class="row">
+    <div class='col-md-3'>
+      <img class="img-responsive" src="../images/FIN06_Mortdecai_1Sht_JD_26x39-w.jpg" alt="book image">
+      <div class="overlay">
+        <ul class="bookdetails text-center">
+          <li class="bookdetailsinfo">name:</li>
+          <li class="bookdetailsinfo">author:</li>
+          <li class="bookdetailsinfo">category:</li>
+        </ul>
+        <span></span>
+        <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> lock</span>
+        <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
+        <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <img class="img-responsive" src="../images/doomsday url.jpg" alt="book image">
+      <div class="overlay">
+        <ul class="bookdetails text-center">
+          <li class="bookdetailsinfo">name:</li>
+          <li class="bookdetailsinfo">author:</li>
+          <li class="bookdetailsinfo">category:</li>
+        </ul>
+        <span></span>
+        <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> lock</span>
+        <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
+        <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
+      </div>
+    </div>
+    <div class='col-md-3'>
+      <img class="img-responsive" src="../images/defiance.jpg" alt="book image">
+      <div class="overlay">
+        <ul class="bookdetails text-center">
+          <li class="bookdetailsinfo">name:</li>
+          <li class="bookdetailsinfo">author:</li>
+          <li class="bookdetailsinfo">category:</li>
+        </ul>
+        <span></span>
+        <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> lock</span>
+        <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
+        <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <img class="img-responsive" src="../images/Fifty-Shades-of-Grey-Film-t_720x1080.jpg" alt="book image">
+      <div class="overlay">
+        <ul class="bookdetails text-center">
+          <li class="bookdetailsinfo">name:</li>
+          <li class="bookdetailsinfo">author:</li>
+          <li class="bookdetailsinfo">category:</li>
+        </ul>
+        <span></span>
+        <span class="btn btn-default pull-right cart glyphicon glyphicon-lock"> lock</span>
+        <span class="btn btn-default pull-left cart glyphicon glyphicon-refresh"></span>
+        <span class="btn btn-default pull-left cart glyphicon glyphicon-trash"></span>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    !--begin of footer-->
+    <footer>
+      <div class="container text-center">
+        <hr />
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="col-md-3">
+            <ul class="nav nav-pills nav-stacked">
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <ul class="nav nav-pills nav-stacked">
+              <li><a href="#">added books</a></li>
+              <li><a href="#">updated books</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <ul class="nav nav-pills nav-stacked">
+              <li><a href="#">deleted books</a></li>
+              <li><a href="#">Presentations</a></li>          
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <ul class="nav nav-pills nav-stacked">
+              <li><a href="#">donate</a></li>
+              <li><a href="#">become a partner</a></li>
+            </ul>
+          </div>  
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+          <div class="col-lg-12">
+              <ul class="nav nav-pills nav-justified">
+                    <li><a href="/">© 2018 B.I.G Resource Center.</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </footer>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
