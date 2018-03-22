@@ -26,39 +26,34 @@
     <![endif]-->
   </head>
   <body>
- 
+     <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span> 
+            </button>
+            <a class="navbar-brand text-center" href="#">B.I.G RESOURCE </br> CENTER </span></a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
 
- <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span> 
-      </button>
-     <a class="navbar-brand text-center" href="#">B.I.G RESOURCE </br> CENTER </span></a> 
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li> <a href="admindashboard.html">Home</a></li>
+              <li> <a href="add.html"> add book </a></li>
+              <li> <a href="update.html">update book</a></li> 
+              <li class="active"><a href="delete.html"> delete book</a></li>
+              <li><a href="#"><span onclick="clientView()";>view client profile</span></a></li>
+            </ul>
 
- <ul class="nav navbar-nav">
-        <li> <a href="admindashboard.html">Home</a></li>
-        <li> <a href="add.html"> add book </a></li>
-        <li> <a href="update.html">update book</a></li> 
-        <li class="active"><a href="delete.html"> delete book</a></li>
-        <li><a href="#"><span onclick="clientView()";>view client profile</span></a></li>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span><span onclick="clientDetails()";>admin account</span></a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>
 
-
-
-      </ul>
-
-      <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span><span onclick="clientDetails()";>admin account</span></a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
- <!-- client view Modal -->
+ <!-- client view Modal the login page -->
   <div id="clientView" role="dialog" class="modal">
 
     <div class="formcontainer text-capitalize">
@@ -66,178 +61,159 @@
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-        <h3></h3>
+          <h3></h3>
           <button type="button" class="close"  onclick="dismiss()";>&times;</button>
           <h4 style="color:green;" class="text-center"> view client account</h4>
         </div>
         
-          <form role="form"  enctype="multipart/form-data" action="view.html">
-           <div class="modal-body">
-              <label>client id no</label>
-              <input type="text" class="form-control" required="" id="name">
-              <label>admin code</label>
-              <input type="text" class="form-control" required="" id="name">
-           </div> 
-           <div class="modal-footer">
-              <input type="reset" class=" btn btn-warning pull-left " value="reset">
-              <input type="submit" class=" btn btn-success pull-right bg-success" value="view profile">
-           </div>
+        <form role="form"  enctype="multipart/form-data" action="view.html">
+          <div class="modal-body">
+            <label>client id no</label>
+            <input type="text" class="form-control" required="" id="name">
+            <label>admin code</label>
+            <input type="text" class="form-control" required="" id="name">
+          </div> 
+          <div class="modal-footer">
+            <input type="reset" class=" btn btn-warning pull-left " value="reset">
+            <input type="submit" class=" btn btn-success pull-right bg-success" value="view profile">
+          </div>
         </form>
        
-    </div>
-  </div> 
+      </div>
+    </div> 
   </div>
-  <!--end of client view modal-->
+  <!--end of client view modal the login page-->
 
 
-<!-- client details modal-->
+<!-- admmin details modal  shows info of the client loged in-->
   <div id="clientDetails" role="dialog" class="clientDetailsContainer">
-
-
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-body">
+  <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-body">
         <button type="button" class="close pull-right"  onclick="dismiss()";>&times;</button></br>
         <div class="clear">
-        <img src="../images/IMG_20180319_113603.jpg" class="img-responsive img-circle" width="150px">
+          <img src="../images/IMG_20180319_113603.jpg" class="img-responsive img-circle" width="150px">
           <aside>
-          <ul class="clientInfo text-capitalize">
-            <li><h4>elizabeth wanjiru</h4></li>
-            <li>job id no:1254634</li>
-            <li>tel:0704873000</li>
-          </ul>           
+            <ul class="clientInfo text-capitalize">
+              <li><h4>elizabeth wanjiru</h4></li>
+              <li>job id no:1254634</li>
+              <li>tel:0704873000</li>
+            </ul>           
           </aside>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-default pull-left" onclick="dismiss()">Cancel</button>
+        <a href="../index.html"><button type="button" class="btn btn-default btn-default pull-right">logout</button></a>
+      </div>
+    </div>
+  </div>
+<!--end of client details modal-->
+  <div class="container text-capitalize">
+    <section>
+      <h3 class="text-center text-capitalize text-danger" >fill in book details to delete an existing book</h3>
+      <form role="form" onsubmit="return deleteSubmit();">
+          <label>book name</label>
+          </br>
+          <input type="text" class="form-control" required="" id="name">
+          </br>
+          <label>book author</label>
+          </br>
+          <input type="text" class="form-control" required="" id="author">
+          </br>
+          <div class="col-md-4">
+            <label class="pull-left me">book category:</label>
+            <input class="form-control pull-left you"" list="category" placeholder="category" required="">
+              <!--list of dropdown categories of books one can add-->
+              <datalist id="category">
+                <option>romantic</option>
+                <option>action</option>
+                <option>pic</option>
+                <option>drama</option>
+                <option> educational</option>
+                <option>historical</option>
+              </datalist>
+              <!--end -->
+            </input>
           </div>
-         
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default btn-default pull-left" onclick="dismiss()">Cancel</button>
-          <a href="../index.html"><button type="button" class="btn btn-default btn-default pull-right">logout</button></a>
-        </div>
-      </div>
- 
+          <div class="col-md-4">
+            <label class="pull-left me" style="width: 100%;">  QTY:  </label>
+            <input class="form-control you" list="quantity" placeholder="quantity" required="" id="qty">
+            <!--list of dropdown number of books one can add-->
+            <datalist id="quantity">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+            </datalist>
+            <!--end -->
+            </input> 
+          </div>
+          <div class="col-md-4">
+            <label class="pull-left me">book code:</label>
+            <input class="form-control you" placeholder="book code" required="" id="book code">
+          </div>
+          </br>
+          <label>Description</label>
+          <textarea rows="5"  class="form-control"></textarea>
+          </br>
+          <input type="reset" class=" btn btn-warning pull-left " value="reset">
+          <input type="submit" class=" btn btn-danger pull-right bg-success" value="delete book">
+      </form>
+    </section>
   </div>
- 
-  <!--end of client details modal-->
-
-
-
-<div class="container text-capitalize">
-<section>
-<h3 class="text-center text-capitalize text-danger" >fill in book details to delete an existing book</h3>
-<form role="form" onsubmit="return deleteSubmit();">
-              <label>book name</label>
-               </br>
-              <input type="text" class="form-control" required="" id="name">
-               </br>
-              <label>book author</label>
-               </br>
-              <input type="text" class="form-control" required="" id="author">
-              </br>
-              <div class="col-md-4">
-              <label class="pull-left me">book category:</label>
-              <input class="form-control pull-left you"" list="category" placeholder="category" required="">
-                <!--list of dropdown-->
-                 <datalist id="category">
-                   <option>romantic</option>
-                   <option>action</option>
-                   <option>pic</option>
-                   <option>drama</option>
-                   <option> educational</option>
-                   <option>historical</option>
-                  </datalist>
-                <!--end -->
-              </input>
-              </div>
-              
-              <div class="col-md-4">
-                <label class="pull-left me" style="width: 100%;">  QTY:  </label>
-               <input class="form-control you" list="quantity" placeholder="quantity" required="" id="qty">
-                <!--list of dropdown-->
-                 <datalist id="quantity">
-                   <option>1</option>
-                   <option>2</option>
-                   <option>3</option>
-                   <option>4</option>
-                   <option>5</option>
-                   <option>6</option>
-                  </datalist>
-                <!--end -->
-              </input> 
-              </div>
-              <div class="col-md-4">
-                <label class="pull-left me">book code:</label>
-               <input class="form-control you" placeholder="book code" required="" id="book code">
-              </div>
-             
-           
-              </br>
-              <label>Description</label>
-              <textarea rows="5"  class="form-control"></textarea>
-              </br>
-              <input type="reset" class=" btn btn-warning pull-left " value="reset">
-
-              <input type="submit" class=" btn btn-danger pull-right bg-success" value="delete book">
-            
-          </form>
-  
-</section>
-</div>
-</section>
-</div>
-
-
-
-
-
-        <footer>
-  <div class="container text-center">
+  <!--start of footer-->
+  <footer>
+    <div class="container text-center">
     <hr />
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="col-md-3">
-        <ul class="nav nav-pills nav-stacked">
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Blog</a></li>
-        </ul>
-      </div>
-      <div class="col-md-3">
-        <ul class="nav nav-pills nav-stacked">
-          <li><a href="#">add books</a></li>
-          <li><a href="#">updated books</a></li>
-        </ul>
-      </div>
-      <div class="col-md-3">
-        <ul class="nav nav-pills nav-stacked">
-          <li><a href="#">deleted</a></li>
-          <li><a href="#">Presentations</a></li>          
-        </ul>
-      </div>
-      <div class="col-md-3">
-        <ul class="nav nav-pills nav-stacked">
-          <li><a href="#">donate</a></li>
-          <li><a href="#">become a partner</a></li>
-        </ul>
-      </div>  
-    </div>
-  </div>
-  <hr>
     <div class="row">
-        <div class="col-lg-12">
-            <ul class="nav nav-pills nav-justified">
-                <li><a href="/">© 2018 B.I.G Resource Center.</a></li>
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Privacy</a></li>
-            </ul>
+      <div class="col-lg-12">
+        <div class="col-md-3">
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
         </div>
+        <div class="col-md-3">
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="#">add books</a></li>
+            <li><a href="#">updated books</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="#">deleted</a></li>
+            <li><a href="#">Presentations</a></li>          
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="#">donate</a></li>
+            <li><a href="#">become a partner</a></li>
+          </ul>
+        </div>  
+      </div>
     </div>
-</div>
-</footer>
+    <hr>
+    <div class="row">
+      <div class="col-lg-12">
+        <ul class="nav nav-pills nav-justified">
+            <li><a href="/">© 2018 B.I.G Resource Center.</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+   </div>
+  </footer>
+  <!--end of footer-->
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/style.js" ></script>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/style.js" ></script>
   </body>
 </html>
