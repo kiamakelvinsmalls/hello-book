@@ -10,14 +10,12 @@
    <!--  <meta http-equiv="refresh" content="100"> -->
     <!-- The above 6 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>B.I.G Resource Center</title>
-
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/animate.css">
     <!--favicon link-->
     <link rel="shortcut icon" type="x/image-icon" href="../images/favicon.ico">
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -26,63 +24,53 @@
     <![endif]-->
   </head>
   <body>
- 
-
- <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span> 
-      </button>
-     <a class="navbar-brand text-center" href="#">B.I.G RESOURCE </br> CENTER </span></a> 
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-
- <ul class="nav navbar-nav">
-        <li> <a href="admindashboard.html">Home</a></li>
-        <li class="active"><a href="add.html"> add book </a></li>
-        <li><a href="update.html">update book</a></li> 
-        <li><a href="delete.html"> delete book</a></li>
-        <li><a href="#"><span onclick="clientView()";>view client profile</span></a></li>
-
-      </ul>
-
-      <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span><span onclick="clientDetails()";>admin account</span></a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-
-
-<!-- client view Modal -->
-  <div id="clientView" role="dialog" class="modal">
-
-    <div class="formcontainer text-capitalize">
-
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-        <h3></h3>
-          <button type="button" class="close"  onclick="dismiss()";>&times;</button>
-          <h4 style="color:green;" class="text-center"> view client account</h4>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+          </button>
+          <a class="navbar-brand text-center" href="#">B.I.G RESOURCE </br> CENTER </span></a> 
         </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li> <a href="admindashboard.html">Home</a></li>
+            <li class="active"><a href="add.html"> add book </a></li>
+            <li><a href="update.html">update book</a></li> 
+            <li><a href="delete.html"> delete book</a></li>
+            <li><a href="#"><span onclick="clientView()";>view client profile</span></a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span><span onclick="clientDetails()";>admin account</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+<!-- client view Modal -->
+    <div id="clientView" role="dialog" class="modal">
+      <div class="formcontainer text-capitalize">
+      <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3></h3>
+            <button type="button" class="close"  onclick="dismiss()";>&times;</button>
+            <h4 style="color:green;" class="text-center"> view client account</h4>
+          </div>
         
           <form role="form" enctype="multipart/form-data" action="view.html">
-           <div class="modal-body">
+            <div class="modal-body">
               <label>client id no</label>
               <input type="text" class="form-control" required="" id="name">
               <label>admin code</label>
               <input type="text" class="form-control" required="" id="name">
-           </div> 
-           <div class="modal-footer">
+            </div> 
+            <div class="modal-footer">
               <input type="reset" class=" btn btn-warning pull-left " value="reset">
               <input type="submit" class=" btn btn-success pull-right bg-success" value="view profile">
-           </div>
-        </form>
+            </div>
+          </form>
        
     </div>
   </div> 
